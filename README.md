@@ -2,6 +2,8 @@
 
 This repository is a fully loaded configuration for Neovim, designed to turn it into a powerful integrated development environment (IDE) for coding. It is based on the popular [ThePrimeagen/init.lua](https://github.com/ThePrimeagen/init.lua) and [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) repositories, and includes many useful plugins and configurations to improve your editing experience.
 
+![Screenshot 1](/images/nvim-screen1.png) ![Screenshot 2](/images/nvim-screen2.png)
+
 ## Features
 
 This configuration includes many features to enhance your Neovim experience, including:
