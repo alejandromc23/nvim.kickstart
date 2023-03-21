@@ -46,7 +46,7 @@ keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv", { desc = "Move highlighed down"}
 
 -- Maintain cursor in the middle of the screen while scrolling down the page
 keymap.set("n", "<C-Up>", "<C-u>zz", { desc = "Maintain cursor in the middle while scrolling up"})
-keymap.set("n", "<S-Down>", "<c-d>zz", { desc = "Maintain cursor in the middle while scrolling down"})
+keymap.set("n", "<C-Down>", "<c-d>zz", { desc = "Maintain cursor in the middle while scrolling down"})
 
 -- Allow replace ocurrence from / command
 keymap.set("n", "<leader>j", "/<c-r><c-w><cr>cgn")
