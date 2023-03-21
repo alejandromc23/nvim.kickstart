@@ -10,7 +10,7 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>d", vim.cmd.Ex, { desc = "[D]irectories"})
 
 -- Save file
-keymap.set("n", "<leader>s", vim.cmd.w, { desc = "[S]ave"})
+keymap.set("n", "<C-s>", vim.cmd.w, { desc = "[S]ave"})
 
 -- Select all
 keymap.set("n", "<C-a>", "ggVG", { desc = "[A]ll"})
@@ -45,8 +45,8 @@ keymap.set("v", "<C-Up>", ":m '<-2<CR>gv=gv", { desc = "Move highlighted up"})
 keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv", { desc = "Move highlighed down"})
 
 -- Maintain cursor in the middle of the screen while scrolling down the page
-keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Maintain cursor in the middle while scrolling up"})
-keymap.set("n", "<C-d>", "<c-d>zz", { desc = "Maintain cursor in the middle while scrolling down"})
+keymap.set("n", "<C-Up>", "<C-u>zz", { desc = "Maintain cursor in the middle while scrolling up"})
+keymap.set("n", "<S-Down>", "<c-d>zz", { desc = "Maintain cursor in the middle while scrolling down"})
 
 -- Allow replace ocurrence from / command
 keymap.set("n", "<leader>j", "/<c-r><c-w><cr>cgn")

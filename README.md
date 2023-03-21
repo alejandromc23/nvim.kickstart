@@ -57,6 +57,7 @@ The `nvim.kickstart` repository contains a number of plugins, each of which prov
 - `github/copilot.vim`: Integrates with the GitHub Copilot AI tool to provide code suggestions.
 - `xiyaowong/nvim-transparent`: Allows for adjusting the transparency of the Neovim window.
 - `romgrk/barbar.nvim`: Provides a tabline with improved coloring and styling.
+- `nvim-tree/nvim-tree.lua`: is a plugin for the Neovim text editor that provides a file explorer sidebar, allowing users to navigate and manage their files and directories.
 
 ## Credits
 
