@@ -25,9 +25,6 @@ keymap.set("n", "<C-w><Right>", "<C-w>>", { desc = "Move tab to the right"})
 -- Disable 'Q' shortcut
 keymap.set("n", "Q", "<nop>")
 
--- Open a new tmux window and run 'tmux-sessionizer' (not working)
-keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 -- Changes file permission to executable
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Convert to executable" })
 
