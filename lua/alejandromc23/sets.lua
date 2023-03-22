@@ -56,3 +56,5 @@ vim.cmd [[
   augroup END
 ]]
 
+-- Set only one status line and not one per window
+vim.opt.laststatus=3

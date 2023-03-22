@@ -79,22 +79,47 @@ require('lazy').setup({
   },
 
   { -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'everforest',
-        component_separators = '|',
-        section_separators = '',
+  'nvim-lualine/lualine.nvim',
+  -- See `:help lualine.txt`
+  opts = {
+    options = {
+      icons_enabled = true,
+      theme = 'gruvbox',
+      component_separators = { left = '', right = ''},
+      section_separators = { left = '', right = ''},
+      disabled_filetypes = {
+	statusline = {},
+	winbar = {},
       },
-      sections = {
-	lualine_a = { 'mode' },
-	lualine_b = { 'branch' },
-	lualine_c = { 'filename' },
-	lualine_x = { 'encoding', 'fileformat', 'filetype' },
-	lualine_y = { 'progress' },
-      },
+      ignore_focus = {},
+      always_divide_middle = true,
+      globalstatus = false,
+      refresh = {
+	statusline = 1000,
+	tabline = 1000,
+	winbar = 1000,
+      }
+    },
+    sections = {
+      lualine_a = {'mode'},
+      lualine_b = {'branch', 'diff', 'diagnostics'},
+      lualine_c = {'filename'},
+      lualine_x = {'encoding', 'fileformat', 'filetype'},
+      lualine_y = {'progress'},
+      lualine_z = {'location'}
+    },
+    inactive_sections = {
+      lualine_a = {},
+      lualine_b = {},
+      lualine_c = {'filename'},
+      lualine_x = {'location'},
+      lualine_y = {},
+      lualine_z = {}
+    },
+    tabline = {},
+    winbar = {},
+    inactive_winbar = {},
+    extensions = {}
     },
   },
 
@@ -165,53 +190,6 @@ require('lazy').setup({
   {
     'romgrk/barbar.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      -- ddd
-      -- Set barbar's options
-      require'bufferline'.setup {
-	-- Enable/disable animations
-	animation = true,
-
-	-- Enable/disable auto-hiding the tab bar when there is a single buffer
-	auto_hide = false,
-
-	-- Enable/disable current/total tabpages indicator (top right corner)
-	tabpages = true,
-
-	-- Enable/disable close button
-	closable = true,
-
-	-- Enables/disable clickable tabs
-	--  - left-click: go to buffer
-	--  - middle-click: delete buffer
-	clickable = true,
-
-	-- Enables / disables diagnostic symbols
-	diagnostics = {
-	  -- you can use a list
-	  {enabled = true, icon = 'ﬀ'}, -- ERROR
-	  {enabled = false}, -- WARN
-	  {enabled = false}, -- INFO
-	  {enabled = true},  -- HINT
-
-	  -- OR `vim.diagnostic.severity`
-	  [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
-	  [vim.diagnostic.severity.WARN] = {enabled = false},
-	  [vim.diagnostic.severity.INFO] = {enabled = false},
-	  [vim.diagnostic.severity.HINT] = {enabled = true},
-	},
-
-	icons = true,
-
-	-- Configure icons on the bufferline.
-	icon_separator_active = '▎',
-	icon_separator_inactive = '▎',
-	icon_close_tab = 'x',
-	icon_close_tab_modified = '●',
-	icon_pinned = '車',
-      }
-
-    end
   },
 
   {
