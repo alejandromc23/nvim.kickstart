@@ -25,6 +25,8 @@ keymap.set("n", "<C-w><Right>", "<C-w>>", { desc = "Move tab to the right"})
 -- Disable 'Q' shortcut
 keymap.set("n", "Q", "<nop>")
 
+keymap.set("n", "<C-c>", "<cmd>q<CR>", { desc = "[Q]uit"});
+
 -- Changes file permission to executable
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Convert to executable" })
 
