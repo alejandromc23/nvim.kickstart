@@ -56,6 +56,10 @@ keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 -- Allows to paste into highlighted without losing initial yanked text
 keymap.set("x", "<leader>p", "\"_dP")
 
+-- Undo and redo keymaps
+keymap.set("n", "<C-z>", ":undo<CR>")
+keymap.set("n", "<C-y>", ":redo<CR>")
+
 --Next mappings only work with vim.api.nvim_set_keymap
 -- Surround word under cursor w/ ` quotes (required vim-surround)
 vim.api.nvim_set_keymap("n", "<leader>`", "ysiw`", { noremap = false })
