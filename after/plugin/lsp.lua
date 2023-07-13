@@ -9,6 +9,8 @@ lsp.ensure_installed({
 	'lua_ls',
 	'rust_analyzer',
 	'intelephense',
+	'pyright',
+	'volar',
 })
 
 -- Fix Undefined global 'vim'
