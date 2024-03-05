@@ -30,7 +30,6 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
-
   {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -123,14 +122,12 @@ require('lazy').setup({
     },
   },
 
-  { -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
+  {
+    "lukas-reineke/headlines.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
   },
 
   -- "gc" to comment visual regions/lines
@@ -201,5 +198,15 @@ require('lazy').setup({
     config = function()
       require("nvim-tree").setup {}
     end,
+  },
+
+  'lervag/vimtex',
+   {
+    'Shougo/deoplete.nvim',
+    run = ':UpdateRemotePlugins', -- This command is for Neovim only
+    config = function()
+      vim.g['deoplete#enable_at_startup'] = 1 -- Enable deoplete at startup
+    end
   }
+
 }, {})
