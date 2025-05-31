@@ -30,28 +30,11 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
-  {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v1.x',
-	  dependencies = {
-		  -- LSP Support
-		  'neovim/nvim-lspconfig',
-		  'williamboman/mason.nvim',
-		  'williamboman/mason-lspconfig.nvim',
-
-		  -- Autocompletion
-		  'hrsh7th/nvim-cmp',
-		  'hrsh7th/cmp-buffer',
-		  'hrsh7th/cmp-path',
-		  'saadparwaiz1/cmp_luasnip',
-		  'hrsh7th/cmp-nvim-lsp',
-		  'hrsh7th/cmp-nvim-lua',
-
-		  -- Snippets
-		  'L3MON4D3/LuaSnip',
-		  'rafamadriz/friendly-snippets',
-	  },
-  },
+  {'mason-org/mason.nvim', tag = 'v1.11.0', pin = true},
+  {'mason-org/mason-lspconfig.nvim', tag = 'v1.32.0', pin = true},
+  {'neovim/nvim-lspconfig', tag = 'v1.8.0', pin = true},
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
@@ -181,7 +164,7 @@ require('lazy').setup({
   'tpope/vim-surround',
   'eandrju/cellular-automaton.nvim',
   'github/copilot.vim',
-  'xiyaowong/nvim-transparent',
+  'xiyaowong/transparent.nvim',
 
   -- Nerd fonts should be installed in order to visualize icons correct
   {
