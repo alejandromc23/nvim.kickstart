@@ -58,3 +58,6 @@ vim.cmd [[
 
 -- Set only one status line and not one per window
 vim.opt.laststatus=3
+
+-- Open new vertical splits to the right
+vim.opt.splitright = true

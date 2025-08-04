@@ -18,6 +18,9 @@ keymap.set("n", "<C-a>", "ggVG", { desc = "[A]ll"})
 -- Split window
 keymap.set("n", "<leader>vt", ":vsplit<Return><C-w>w", { desc = "[T]ab"})
 
+-- Move to next window
+keymap.set("n", "<leader>l", "<C-w>w", { desc = "[N]ext window"})
+
 -- Resize window
 keymap.set("n", "<C-w><Left>", "<C-w><", { desc = "Move tab to the left"})
 keymap.set("n", "<C-w><Right>", "<C-w>>", { desc = "Move tab to the right"})

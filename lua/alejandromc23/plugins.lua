@@ -179,6 +179,31 @@ require('lazy').setup({
     config = function()
       vim.g['deoplete#enable_at_startup'] = 1 -- Enable deoplete at startup
     end
-  }
-
+  },
+  {
+    "azorng/goose.nvim",
+    config = function()
+      require("goose").setup({})
+    end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+	"MeanderingProgrammer/render-markdown.nvim",
+	opts = {
+	  anti_conceal = { enabled = false },
+	},
+      }
+    },
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken",
+    opts = {
+      -- See Configuration section for options
+    },
+    -- See Commands section for default commands if you want to lazy load on them
+  },
 }, {})
