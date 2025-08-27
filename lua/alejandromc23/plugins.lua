@@ -33,9 +33,14 @@ require('lazy').setup({
   {'mason-org/mason.nvim', tag = 'v1.11.0', pin = true},
   {'mason-org/mason-lspconfig.nvim', tag = 'v1.32.0', pin = true},
   {'neovim/nvim-lspconfig', tag = 'v1.8.0', pin = true},
-  {'hrsh7th/cmp-nvim-lsp'},
-  {'hrsh7th/nvim-cmp'},
-
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    commit = "a8912b8",
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    commit = "059e894",
+  },
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
