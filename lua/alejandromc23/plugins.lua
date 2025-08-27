@@ -214,4 +214,27 @@ require('lazy').setup({
     },
     -- See Commands section for default commands if you want to lazy load on them
   },
+
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    version = false,
+    opts = {
+      debug = true,
+      provider = "copilot",
+      auto_suggestions_provider = nil,
+    },
+    build = "make",
+    dependencies = {
+      "zbirenbaum/copilot.lua", -- Required for copilot provider
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "hrsh7th/nvim-cmp",
+      "nvim-tree/nvim-web-devicons",
+      -- Optional:
+      "nvim-telescope/telescope.nvim",
+    },
+  }
 }, {})
