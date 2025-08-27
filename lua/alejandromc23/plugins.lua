@@ -168,7 +168,10 @@ require('lazy').setup({
 
   'tpope/vim-surround',
   'eandrju/cellular-automaton.nvim',
-  'github/copilot.vim',
+  {
+    "zbirenbaum/copilot.lua",
+    event = "VeryLazy",
+  },
   'xiyaowong/transparent.nvim',
 
   -- Nerd fonts should be installed in order to visualize icons correct
